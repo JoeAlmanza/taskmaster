@@ -13,7 +13,7 @@ export default class List {
 get Template(){
   return `
   <div class="card col-4 p-0 m-4 text-center">
-    <div class="card-header">
+    <div class="card-header" id="cardHeader">
       <h4 class="text-info"><u>${this.name}</u>   <i class="fa fa-times" aria-hidden="true" onclick="app.listsController.removeList('${this.id}')"></i></h4>
     </div>
     <form onsubmit="app.listsController.createTask(event, '${this.id}')">

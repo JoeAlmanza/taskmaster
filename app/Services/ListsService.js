@@ -14,7 +14,13 @@ class ListService {
   }
 
   removeList(id){
-    STORE.State.lists = STORE.State.lists.filter(l => l.id !=id)
+    let c = confirm("Are you sure you want to remove this list?");
+    if(c == true){
+      STORE.State.lists = STORE.State.lists.filter(l => l.id !=id)
+    }
+    else{
+      return
+    }
   }
 
   createTask(newTask, listId){
@@ -23,9 +29,16 @@ class ListService {
   }
 
   removeTask(listId, task){
+    // debugger
+    let c = confirm("Are you sure you want to remove this task?");
+    if(c == true){
     let list = STORE.State.lists.find(l => l.id == listId)
-    let taskIndex = list.task.findIndex(t => t == list.task)
+    let taskIndex = list.task.findIndex(t => t == task)
     list.task.splice(taskIndex, 1)
+    }
+    else{
+      return
+    }
   }
 }
 
