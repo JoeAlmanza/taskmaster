@@ -19,7 +19,10 @@ export default class ListsController {
   createList(event){
     event.preventDefault();
     let form = event.target
-    let newList = {name: form.listTitle.value}
+    let newList = {
+      name: form.listTitle.value,
+      color: form.colorSelect.value
+    }
     ListService.createList(newList)
     _drawLists()
   }

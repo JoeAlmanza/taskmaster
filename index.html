@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <header class="container-fluid bg-info text-light">
+    <header class="container-fluid bg-info text-dark">
       <div class="row text-center my-3">
         <div class="col-12">
           <h1><u>Task Master</u></h1>
@@ -23,27 +23,33 @@
     </header>
 
     <main class="container-fluid">
-      <div class="row">
-        <div class="col-6 my-3" id="createListArea">   
-          <form onsubmit="app.listsController.createList(event)" class="form-inline"> 
+
+      <div class="row bg-info">
+        <div class="col mt-2" id="createListArea">   
+          <form onsubmit="app.listsController.createList(event)" class="form-inline my-3"> 
             <div class="form-inline">
-              <label for="listTitle" class="mx-2"><h4>List Title</h4></label>
+              <label for="listTitle" class="mx-2 text-dark"><h4><u>List Title</u>:</h4></label>
               <input type="listTitle" class="form-control mx-2" id="listTitle" placeholder="Enter the list title...">
             </div>
-            <button type="submit" class="btn btn-outline-primary form-control">Create List</button>
+            <select class="custom-select mx-2" id="colorSelect" aria-label="Example select with button addon">
+              <option selected>Choose Tab Color...</option>
+              <option id="bg-primary" value="bg-primary">Blue</option>
+              <option id="bg-warning" value="bg-warning">Yellow</option>
+              <option id="bg-info" value="bg-info">Teal</option>
+              <option id="bg-success" value="bg-success">Green</option>
+            </select>
+            <button type="submit" class="btn btn-outline-dark form-control">Create List</button>
           </form>
         </div>
       </div>
-      <hr>
-
+      
       <div class="row" id="listArea">
       </div>
 
-      </div>
     </main>
     
-    <footer>
-  
+    <footer class="container-fluid text-center bg-info">
+      <p class="my-4">Made with love by Codeworks <3</p>
     </footer>
     <script src="app/main.js" type="module"></script>
   </body>

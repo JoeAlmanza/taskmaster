@@ -1,6 +1,5 @@
 import STORE from "../store.js"
 import List from "../Models/Lists.js";
-import store from "../store.js";
 
 //Public
 class ListService {
@@ -29,7 +28,6 @@ class ListService {
   }
 
   removeTask(listId, task){
-    // debugger
     let c = confirm("Are you sure you want to remove this task?");
     if(c == true){
     let list = STORE.State.lists.find(l => l.id == listId)

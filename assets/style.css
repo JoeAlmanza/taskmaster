@@ -2,10 +2,18 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(./paper.jpg);
+  background-size: cover;
+  background-position: center center;
+  font-family: "Comic Sans MS", cursive, sans-serif
 }
 
 main{
   flex-grow: 1;
+}
+
+footer{
+  height: 8vh;
 }
 
 .fa-times{
