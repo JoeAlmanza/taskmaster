@@ -7,3 +7,12 @@ body{
 main{
   flex-grow: 1;
 }
+
+.fa-times{
+  cursor: pointer;
+  color: red;
+}
+
+.card{
+  max-width: 400px;
+}

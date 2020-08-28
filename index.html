@@ -8,23 +8,43 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/style.css" />
-    <title>TaskMaster</title>
+    <title>Task Master</title>
   </head>
 
   <body>
     <header class="container-fluid bg-info text-light">
-      <div class="row text-center">
-        <h1>Task Master</h1>
+      <div class="row text-center my-3">
+        <div class="col-12">
+          <h1><u>Task Master</u></h1>
+        </div>
       </div>
     </header>
-  <footer>
 
-  </footer>
-  <main>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-6 my-3" id="createListArea">   
+          <form onsubmit="app.listsController.createList(event)" class="form-inline"> 
+            <div class="form-inline">
+              <label for="listTitle" class="mx-2"><h4>List Title</h4></label>
+              <input type="listTitle" class="form-control mx-2" id="listTitle" placeholder="Enter the list title...">
+            </div>
+            <button type="submit" class="btn btn-outline-primary form-control">Create List</button>
+          </form>
+        </div>
+      </div>
+      <hr>
 
-  </main>
+      <div class="row" id="listArea">
+      </div>
 
+      </div>
+    </main>
+    
+    <footer>
+  
+    </footer>
     <script src="app/main.js" type="module"></script>
   </body>
 </html>
