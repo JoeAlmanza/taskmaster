@@ -25,7 +25,7 @@ get Template(){
         <label for="taskBody" class="ml-3 mt-2 text-dark"><b>Add task...</b></label>
         <input type="text" class="" id="taskBody" placeholder="Enter your new task...">
       </div>
-        <button class="btn btn-outline-info mb-2" type="submit">Add Task</button>
+        <button class="btn btn-outline-dark mb-2 ${this.color}" type="submit">Add Task</button>
     </form>
   </div>
   </div>
