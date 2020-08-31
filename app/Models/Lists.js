@@ -15,7 +15,7 @@ get Template(){
   return `
   <div class="card col-4 p-0 m-4 text-center">
     <div class="card-header ${this.color}" id="cardHeader">
-      <h4 class="text-dark"><u>${this.name}</u>   <i class="fa fa-times" aria-hidden="true" onclick="app.listsController.removeList('${this.id}')"></i></h4>
+      <h3 class="text-dark"><u>${this.name}</u>   <i class="fa fa-times" aria-hidden="true" onclick="app.listsController.removeList('${this.id}')"></i></h3>
     </div>
     <form onsubmit="app.listsController.createTask(event, '${this.id}')">
       <div class="form-group">

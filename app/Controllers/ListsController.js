@@ -8,7 +8,6 @@ function _drawLists() {
   STORE.State.lists.forEach(l => template += l.Template)
   document.getElementById("listArea").innerHTML = template
 }
-
 //Public
 export default class ListsController {
   constructor() {
